@@ -42,17 +42,18 @@ const services = [
 
 export default function Services() {
     return (
-        <section id="services" className="py-24 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <div className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-primary uppercase bg-red-50 rounded-full">
-                        Services
-                    </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-                        How We Help You Win
+        <section id="services" className="py-24 bg-white relative overflow-hidden">
+            {/* Decorative blob */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gray-50/50 skew-x-12 pointer-events-none"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="text-center max-w-3xl mx-auto mb-20">
+                    <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Our Expertise</span>
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Comprehensive <br />Digital Solutions.
                     </h2>
-                    <p className="text-lg text-gray-600">
-                        From intelligent automation to process engineering, we provide end-to-end solutions to power your transformation journey.
+                    <p className="text-xl text-gray-500 font-light">
+                        We leverage cutting-edge technology to drive efficiency and growth for your organization.
                     </p>
                 </div>
 
@@ -60,15 +61,15 @@ export default function Services() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-1"
+                            className="group p-8 rounded-3xl bg-white border border-gray-100 shadow-lg hover:shadow-2xl hover:border-primary/20 transition-all duration-300 hover:-translate-y-2"
                         >
-                            <div className="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                                <service.icon size={28} />
+                            <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <service.icon size={32} />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-600 leading-relaxed text-sm">
+                            <p className="text-gray-500 leading-relaxed">
                                 {service.description}
                             </p>
                         </div>

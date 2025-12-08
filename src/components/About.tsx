@@ -31,7 +31,7 @@ export default function About() {
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                             {/* Placeholder for generated image */}
                             <img
-                                src="/about_team.png"
+                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
                                 alt="Tech Brokers Team"
                                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                             />

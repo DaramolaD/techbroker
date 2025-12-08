@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
@@ -13,16 +13,32 @@ const navLinks = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const navClasses = scrolled
+        ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
+        : "bg-transparent py-6";
+
+    const textClasses = scrolled ? "text-gray-900" : "text-white";
 
     return (
-        <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${navClasses}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-20 items-center">
+                <div className="flex justify-between items-center">
                     <div className="flex-shrink-0 flex items-center">
-                        {/* Logo Placeholder - Text based for now */}
                         <Link href="/" className="flex items-center gap-2">
-                            <span className="bg-primary text-white p-1 rounded font-bold text-xl">TB</span>
-                            <span className="font-bold text-xl tracking-tight text-secondary">Tech Brokers</span>
+                            {/* Replaced colored block with simple text for elegance as per reference style */}
+                            <span className={`font-bold text-2xl tracking-tight transition-colors ${textClasses}`}>
+                                TechBrokers<span className="text-primary">.</span>
+                            </span>
                         </Link>
                     </div>
 
@@ -32,14 +48,14 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-gray-600 hover:text-primary font-medium transition-colors"
+                                className={`text-sm font-medium transition-colors hover:text-primary ${textClasses} opacity-90 hover:opacity-100`}
                             >
                                 {link.name}
                             </Link>
                         ))}
                         <Link
                             href="#contact"
-                            className="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary/20"
+                            className="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary/20 text-sm"
                         >
                             Get Started
                         </Link>
@@ -49,7 +65,7 @@ export default function Navbar() {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-gray-600 hover:text-primary focus:outline-none"
+                            className={`${textClasses} hover:text-primary focus:outline-none transition-colors`}
                         >
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
@@ -59,14 +75,14 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-xl">
-                    <div className="px-4 pt-2 pb-6 space-y-2">
+                <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl">
+                    <div className="px-4 py-6 space-y-3">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
                             >
                                 {link.name}
                             </Link>

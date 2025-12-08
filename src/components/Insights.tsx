@@ -45,7 +45,7 @@ export default function Insights() {
                                 {/* Blog Thumb Placeholder */}
                                 <div
                                     className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                                    style={{ backgroundImage: "url('/blog_thumb.png')" }}
+                                    style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80')" }}
                                 ></div>
                                 <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                                     {post.category}
