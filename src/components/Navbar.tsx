@@ -35,10 +35,14 @@ export default function Navbar() {
                 <div className="flex justify-between items-center">
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="flex items-center gap-2">
-                            {/* Replaced colored block with simple text for elegance as per reference style */}
-                            <span className={`font-bold text-2xl tracking-tight transition-colors ${textClasses}`}>
-                                TechBrokers<span className="text-primary">.</span>
-                            </span>
+                            {/* Logo SVGs - Toggling based on scroll state */}
+                            <div className="relative h-10 w-40">
+                                <img
+                                    src={scrolled ? "/logo_5.svg" : "/logo_1.svg"}
+                                    alt="Tech Brokers Logo"
+                                    className="h-full w-auto object-contain"
+                                />
+                            </div>
                         </Link>
                     </div>
 
