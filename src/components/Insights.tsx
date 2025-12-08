@@ -6,19 +6,22 @@ const posts = [
         title: "The Future of Digital Banking in Africa: 2024 Trends",
         category: "Digital Banking",
         date: "March 15, 2024",
-        summary: "From direct connectivity to the consumer wallet, discover how regulatory changes are reshaping the landscape.",
+        summary: "From direct connectivity to consumer wallets, discover how regulatory changes are reshaping the landscape.",
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
     },
     {
         title: "Government Innovation: Digital Transformation Success Stories",
         category: "Public Sector",
         date: "March 10, 2024",
         summary: "How modern e-governance platforms are successfully implementing digital transformation initiatives.",
+        image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
     },
     {
         title: "AgriTech: Opportunities and Challenges in Africa",
         category: "Technology",
         date: "March 05, 2024",
         summary: "Exploring how technology is solving food security issues across the African continent.",
+        image: "https://images.unsplash.com/photo-1625246333195-bf8f76f402df?auto=format&fit=crop&w=800&q=80"
     },
 ];
 
@@ -45,7 +48,7 @@ export default function Insights() {
                                 {/* Blog Thumb Placeholder */}
                                 <div
                                     className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                                    style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80')" }}
+                                    style={{ backgroundImage: `url('${post.image}')` }}
                                 ></div>
                                 <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                                     {post.category}

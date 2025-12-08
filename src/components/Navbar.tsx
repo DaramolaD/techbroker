@@ -40,7 +40,7 @@ export default function Navbar() {
                                 <img
                                     src={scrolled ? "/logo_5.svg" : "/logo_1.svg"}
                                     alt="Tech Brokers Logo"
-                                    className="h-full w-auto object-contain"
+                                    className="h-full w-40 md:w-auto object-contain"
                                 />
                             </div>
                         </Link>
