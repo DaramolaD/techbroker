@@ -23,10 +23,10 @@ export default function Leadership() {
 
                         <div>
                             <h2 className="text-xl md:text-2xl font-bold text-secondary mb-6 leading-relaxed">
-                                "Technology is not just about code. It’s about creating systems that allow businesses and nations to thrive. At TechBrokers, we are obsessed with the ‘how’—the execution gap that separates success from failure."
+                                "Technology is not just about code. It&apos;s about creating systems that allow businesses and nations to thrive. At TechBrokers, we are obsessed with the &apos;how&apos; the execution gap that separates success from failure."
                             </h2>
                             <div>
-                                <h3 className="text-lg font-bold text-primary">Daramola Dan</h3>
+                                <h3 className="text-lg font-bold text-primary">Wasui Popoola</h3>
                                 <p className="text-gray-500 text-sm">Founder & Principal Consultant</p>
                             </div>
 

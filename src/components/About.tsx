@@ -33,45 +33,41 @@ export default function About() {
                         </div>
                     </div>
 
-                    {/* Right: Top Services Highlight */}
-                    <div className="relative">
-                        {/* Abstract Background Element for List */}
-                        <div className="absolute -inset-4 bg-gray-50 rounded-3xl transform rotate-2 z-0"></div>
-
-                        <div className="relative z-10 px-6 py-8 bg-white rounded-2xl shadow-xl border border-gray-100">
-                            <h3 className="text-xl font-bold text-gray-900 mb-6">Core Capabilities</h3>
-                            <div className="space-y-6">
-                                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
-                                    <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                                        <Target className="w-6 h-6" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-900">Digital Strategy & Transformation</h4>
-                                        <p className="text-sm text-gray-500 mt-1">Systems migration, cloud adoption, and process auditing.</p>
-                                    </div>
+                    {/* Right: Image */}
+                    <div className="relative h-full">
+                        <div className="aspect-[4/3] w-full h-full rounded-2xl overflow-hidden shadow-2xl relative z-10">
+                            <img
+                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                                alt="TechBrokers Team Collaboration"
+                                className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
+                            />
+                            {/* Overlay Badge - Mission (Bottom Left) */}
+                            <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-gray-100 max-w-xs animate-float">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                                    <span className="text-secondary font-bold text-sm uppercase tracking-wider">Mission</span>
                                 </div>
+                                <p className="text-gray-900 font-bold text-lg leading-tight">
+                                    Innovate boldly, execute flawlessly.
+                                </p>
+                            </div>
 
-                                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
-                                    <div className="p-3 rounded-lg bg-secondary/10 text-secondary">
-                                        <Lightbulb className="w-6 h-6" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-900">Product Innovation</h4>
-                                        <p className="text-sm text-gray-500 mt-1">MVP development, user experience design, and market validation.</p>
-                                    </div>
+                            {/* Overlay Badge - Vision (Top Right) */}
+                            <div className="absolute top-6 right-6 bg-secondary/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/10 max-w-xs animate-float animation-delay-2000">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <div className="w-2 h-2 rounded-full bg-white animate-pulse"></div>
+                                    <span className="text-primary font-bold text-sm uppercase tracking-wider">Vision</span>
                                 </div>
-
-                                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
-                                    <div className="p-3 rounded-lg bg-orange-100 text-orange-600">
-                                        <Rocket className="w-6 h-6" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-900">Go-To-Market Execution</h4>
-                                        <p className="text-sm text-gray-500 mt-1">Launch strategies, partnership development, and growth scaling.</p>
-                                    </div>
-                                </div>
+                                <p className="text-white font-bold text-lg leading-tight">
+                                    Africa's digital infrastructure backbone.
+                                </p>
                             </div>
                         </div>
+
+                        {/* Decorative Elements */}
+                        <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl -z-0"></div>
+                        <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-secondary/10 rounded-full blur-3xl -z-0"></div>
+                        <div className="absolute top-1/2 -right-8 w-16 h-16 bg-dots-pattern opacity-20 hidden lg:block"></div>
                     </div>
 
                 </div>
