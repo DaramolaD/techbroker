@@ -8,22 +8,22 @@ export default function CTA() {
                 <div className="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl relative">
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                         <div className="p-12 md:p-16 flex flex-col justify-center relative z-10">
-                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
                                 Let's Build Something Exceptional Together
                             </h2>
                             <p className="text-gray-300 text-lg mb-10 leading-relaxed">
-                                Whether you're a fintech founder, a public sector innovator, or a bank CEO—we're ready to deliver results.
+                                Whether you're a fintech founder, a public sector innovator, or a bank CEO, we're ready to deliver results.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
-                                    href="#contact"
+                                    href="/contact"
                                     className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-primary hover:bg-primary-dark rounded-full transition-all"
                                 >
                                     Book a Call
                                     <ArrowRight className="ml-2 h-5 w-5" />
                                 </Link>
                                 <Link
-                                    href="#services"
+                                    href="/#services"
                                     className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border border-gray-600 hover:bg-gray-800 rounded-full transition-all"
                                 >
                                     See Our Strategy

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Globe, Play, ShieldCheck } from "lucide-react";
 import Stats from "./Stats";
 
 export default function Hero() {
@@ -34,13 +34,14 @@ export default function Hero() {
                         >
                             Get Started
                         </Link>
-                        <button className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border border-white/20 rounded-full hover:bg-white/10 transition-all backdrop-blur-sm">
+                        {/* <button className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border border-white/20 rounded-full hover:bg-white/10 transition-all backdrop-blur-sm">
                             <Play className="w-5 h-5 mr-2 fill-current" />
                             Watch Video
-                        </button>
+                        </button> */}
                     </div>
                 </div>
                 {/* <Stats /> */}
+
             </div>
 
             {/* Bottom Fade - extended height for better blend */}

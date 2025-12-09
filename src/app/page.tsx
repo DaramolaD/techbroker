@@ -1,28 +1,30 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import Industries from "@/components/Industries";
 import Process from "@/components/Process";
-import Testimonials from "@/components/Testimonials";
-import CTA from "@/components/CTA";
+import Scenarios from "@/components/Scenarios";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import Leadership from "@/components/Leadership";
 import Insights from "@/components/Insights";
+import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white font-sans">
       <Navbar />
       <Hero />
-      {/* <Stats /> */}
-      <div className="pt-12 md:pt-20"> {/* Responsive spacing */}
-        <About />
-      </div>
-      <Process />
+      <About />
       <Services />
-      <Testimonials />
-      <CTA />
+      <Industries />
+      <Process />
+      <Scenarios />
+      <WhyChooseUs />
+      <Leadership />
       <Insights />
+      <CTA />
       <Footer />
     </main>
   );
