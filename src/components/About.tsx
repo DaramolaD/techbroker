@@ -1,45 +1,79 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Target, Lightbulb, Rocket } from "lucide-react";
 
 export default function About() {
     return (
-        <section id="about" className="py-20 bg-white overflow-hidden">
+        <section id="about" className="py-24 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    {/* Content */}
-                    <div className="order-2 lg:order-1">
-                        <div className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-primary uppercase bg-red-50 rounded-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+
+                    {/* Left: Narrative */}
+                    <div>
+                        <div className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/5 rounded-full border border-primary/10">
                             Who We Are
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                            Your Execution Partner
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+                            More Than Consultants. <br />
+                            <span className="text-secondary">We Are Builders.</span>
                         </h2>
-                        <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
+                        <div className="space-y-6 text-lg text-gray-600 leading-relaxed mix-blend-multiply">
                             <p>
-                                Tech Brokers Ltd is a digital transformation and technology consulting firm based in Lagos, Nigeria, helping businesses, heavy industries, universities, startups, and governments innovate boldly and execute flawlessly.
+                                Tech Brokers Ltd is a premier digital transformation and technology consultancy. We don’t just offer advice; we help businesses, governments, and startups navigate the complexities of the digital age with confidence.
                             </p>
                             <p>
-                                Led by industry veterans, we specialize in launching digital banks, modernizing government services, and automating fast-paced global supply chains across all sectors of the economy.
+                                From launching next-gen digital banks in Lagos to modernizing government workflows in Abuja, our mission is simple: <strong>Innovate boldly, execute flawlessly.</strong>
                             </p>
-                            <p className="font-medium text-gray-900 border-l-4 border-primary pl-4 italic">
-                                We don't just advise—we build, scale, and deliver reports where it counts.
-                            </p>
+                        </div>
+
+                        <div className="mt-10">
+                            <Link href="#contact" className="group inline-flex items-center font-semibold text-secondary hover:text-primary transition-colors">
+                                Learn more about our mission
+                                <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                            </Link>
                         </div>
                     </div>
 
-                    {/* Image */}
-                    <div className="order-1 lg:order-2 relative">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                            {/* Placeholder for generated image */}
-                            <img
-                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                                alt="Tech Brokers Team"
-                                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
-                            />
+                    {/* Right: Top Services Highlight */}
+                    <div className="relative">
+                        {/* Abstract Background Element for List */}
+                        <div className="absolute -inset-4 bg-gray-50 rounded-3xl transform rotate-2 z-0"></div>
+
+                        <div className="relative z-10 px-6 py-8 bg-white rounded-2xl shadow-xl border border-gray-100">
+                            <h3 className="text-xl font-bold text-gray-900 mb-6">Core Capabilities</h3>
+                            <div className="space-y-6">
+                                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
+                                    <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                                        <Target className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900">Digital Strategy & Transformation</h4>
+                                        <p className="text-sm text-gray-500 mt-1">Systems migration, cloud adoption, and process auditing.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
+                                    <div className="p-3 rounded-lg bg-secondary/10 text-secondary">
+                                        <Lightbulb className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900">Product Innovation</h4>
+                                        <p className="text-sm text-gray-500 mt-1">MVP development, user experience design, and market validation.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
+                                    <div className="p-3 rounded-lg bg-orange-100 text-orange-600">
+                                        <Rocket className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900">Go-To-Market Execution</h4>
+                                        <p className="text-sm text-gray-500 mt-1">Launch strategies, partnership development, and growth scaling.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        {/* Decorative elements */}
-                        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gray-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
                     </div>
+
                 </div>
             </div>
         </section>

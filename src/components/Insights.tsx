@@ -1,81 +1,90 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, User } from "lucide-react";
 
-const posts = [
+const articles = [
     {
-        title: "The Future of Digital Banking in Africa: 2024 Trends",
-        category: "Digital Banking",
-        date: "March 15, 2024",
-        summary: "From direct connectivity to consumer wallets, discover how regulatory changes are reshaping the landscape.",
+        title: "The Paperless Government: A Blueprint for 2026",
+        excerpt: "How emerging markets are bypassing legacy infrastructure to build fully digital public services.",
+        category: "Government",
+        date: "Oct 24, 2025",
+        author: "Daramola A.",
+        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        title: "Security in the Age of Open Banking",
+        excerpt: "As APIs connect more financial institutions, the attack surface grows. Here is how we secure it.",
+        category: "Fintech",
+        date: "Nov 02, 2025",
+        author: "TechBrokers Team",
         image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
     },
     {
-        title: "Government Innovation: Digital Transformation Success Stories",
-        category: "Public Sector",
-        date: "March 10, 2024",
-        summary: "How modern e-governance platforms are successfully implementing digital transformation initiatives.",
-        image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-        title: "AgriTech: Opportunities and Challenges in Africa",
-        category: "Technology",
-        date: "March 05, 2024",
-        summary: "Exploring how technology is solving food security issues across the African continent.",
-        image: "https://images.unsplash.com/photo-1625246333195-bf8f76f402df?auto=format&fit=crop&w=800&q=80"
-    },
+        title: "Scaling Beyond the MVP",
+        excerpt: "Why 70% of startups fail to scale their technology stack after the seed round, and how to fix it.",
+        category: "Startups",
+        date: "Nov 15, 2025",
+        author: "Sarah J.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+    }
 ];
 
 export default function Insights() {
     return (
         <section id="insights" className="py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <div className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-primary uppercase bg-red-50 rounded-full">
-                        Latest Insights
+                <div className="flex justify-between items-end mb-12">
+                    <div>
+                        <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Thought Leadership</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+                            Latest Insights
+                        </h2>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Thought Leadership
-                    </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Stay updated with the latest trends, strategies, and thought leadership in digital transformation.
-                    </p>
+                    <Link href="#" className="hidden md:inline-flex items-center text-secondary font-semibold hover:text-primary transition-colors">
+                        View all articles <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {posts.map((post, index) => (
-                        <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
-                            <div className="h-48 overflow-hidden relative">
-                                {/* Blog Thumb Placeholder */}
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                                    style={{ backgroundImage: `url('${post.image}')` }}
-                                ></div>
-                                <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                                    {post.category}
+                <div className="grid md:grid-cols-3 gap-8">
+                    {articles.map((article, index) => (
+                        <article key={index} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
+                            <div className="relative h-48 overflow-hidden">
+                                <img
+                                    src={article.image}
+                                    alt={article.title}
+                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-secondary uppercase tracking-wider">
+                                    {article.category}
                                 </div>
                             </div>
-                            <div className="p-8">
-                                <div className="text-sm text-gray-500 mb-3">{post.date}</div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                                    {post.title}
+                            <div className="p-6 flex flex-col flex-grow">
+                                <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
+                                    <div className="flex items-center gap-1">
+                                        <Calendar className="w-3 h-3" />
+                                        {article.date}
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                        <User className="w-3 h-3" />
+                                        {article.author}
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                                    <Link href="#">{article.title}</Link>
                                 </h3>
-                                <p className="text-gray-600 mb-6 line-clamp-3">
-                                    {post.summary}
+                                <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                                    {article.excerpt}
                                 </p>
-                                <Link href="#" className="inline-flex items-center text-primary font-semibold hover:text-primary-dark">
-                                    Read More <ArrowRight size={16} className="ml-1" />
+                                <Link href="#" className="inline-flex items-center text-sm font-semibold text-secondary group-hover:text-primary transition-colors">
+                                    Read article <ArrowRight className="ml-2 w-4 h-4" />
                                 </Link>
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
 
-                <div className="text-center mt-12">
-                    <Link
-                        href="#"
-                        className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-gray-900 hover:bg-black rounded-full transition-all"
-                    >
-                        View All Insights
+                <div className="mt-8 text-center md:hidden">
+                    <Link href="#" className="inline-flex items-center text-secondary font-semibold hover:text-primary transition-colors">
+                        View all articles <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
                 </div>
             </div>
