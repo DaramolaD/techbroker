@@ -61,6 +61,32 @@
   }
 }
 
+@layer components {
+  .article-content h3 {
+    @apply text-2xl font-bold text-gray-900 mt-10 mb-4 pb-2 border-b border-gray-100;
+  }
+
+  .article-content p {
+    @apply text-lg text-gray-600 leading-relaxed mb-6 font-light;
+  }
+
+  .article-content ul {
+    @apply space-y-3 mb-8 list-disc pl-6 text-gray-600;
+  }
+
+  .article-content li {
+    @apply pl-2 leading-relaxed;
+  }
+
+  .article-content strong {
+    @apply text-gray-900 font-bold;
+  }
+
+  .article-content blockquote {
+    @apply border-l-4 border-primary pl-4 italic text-gray-800 my-8;
+  }
+}
+
 @layer base {
   body {
     @apply bg-white text-gray-900;

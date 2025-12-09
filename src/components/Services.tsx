@@ -33,7 +33,7 @@ const services = [
     },
     {
         title: "Go to Market",
-        description: "Expansion strategies that scale startups into unicorns.",
+        description: "Comprehensive launch strategies that turn startups into market leaders. We handle market fit analysis, growth hacking pipelines, and customer acquisition to ensure your product lands with impact.",
         icon: Rocket,
         className: "md:col-span-2 md:row-span-1",
         bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
@@ -41,7 +41,7 @@ const services = [
     },
     {
         title: "Cost Systems Recovery",
-        description: "Revenue collection and automated disbursement systems.",
+        description: "Advanced revenue engineering and automated disbursement. We optimize financial flows to stop leakage, automate reconciliation, and ensure 100% transparency in your transaction lifecycle.",
         icon: BarChart,
         className: "md:col-span-2 md:row-span-1",
         bgImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
@@ -49,7 +49,7 @@ const services = [
     },
     {
         title: "Social Impact",
-        description: "Tech for good: EdTech, AgriTech, and Renewable Energy.",
+        description: "Tech for good: EdTech, AgriTech, and Renewable Energy. We build sustainable digital platforms that solve critical societal challenges, driving measurable positive change through innovation.",
         icon: Heart,
         className: "md:col-span-2 md:row-span-1 bg-gray-900 text-white",
         bgImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",

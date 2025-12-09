@@ -2,10 +2,10 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Industries from "@/components/Industries";
-import Process from "@/components/Process";
+// import Process from "@/components/Process";
 import Scenarios from "@/components/Scenarios";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import Leadership from "@/components/Leadership";
+// import Leadership from "@/components/Leadership";
 import Insights from "@/components/Insights";
 import CTA from "@/components/CTA";
 
@@ -16,11 +16,11 @@ export default function Home() {
       <About />
       <Services />
       <Industries />
-      <Process />
+      {/* <Process /> */}
       <Scenarios />
       <WhyChooseUs />
-      <Leadership />
-      <Insights />
+      {/* <Leadership /> */}
+      <Insights limit={3} />
       <CTA />
     </main>
   );

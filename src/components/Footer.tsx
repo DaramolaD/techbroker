@@ -28,15 +28,15 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Solutions */}
+                    {/* Key Industries */}
                     <div>
-                        <h4 className="text-lg font-bold text-white mb-6">Solutions</h4>
+                        <h4 className="text-lg font-bold text-white mb-6">Key Industries</h4>
                         <ul className="space-y-4 text-gray-400 text-sm">
-                            <li><Link href="/#services" className="hover:text-primary transition-colors">Digital Banking Strategy</Link></li>
-                            <li><Link href="/#services" className="hover:text-primary transition-colors">Government Innovation</Link></li>
-                            <li><Link href="/#services" className="hover:text-primary transition-colors">Enterprise Security</Link></li>
-                            <li><Link href="/#services" className="hover:text-primary transition-colors">Cloud Migration</Link></li>
-                            <li><Link href="/#services" className="hover:text-primary transition-colors">Data Analytics</Link></li>
+                            <li><Link href="/industries#financial-services" className="hover:text-primary transition-colors">Financial Services</Link></li>
+                            <li><Link href="/industries#government" className="hover:text-primary transition-colors">Government</Link></li>
+                            <li><Link href="/industries#logistics" className="hover:text-primary transition-colors">Logistics</Link></li>
+                            <li><Link href="/industries#startups" className="hover:text-primary transition-colors">Startups & Tech</Link></li>
+                            <li><Link href="/industries#healthcare" className="hover:text-primary transition-colors">Healthcare</Link></li>
                         </ul>
                     </div>
 
@@ -45,9 +45,9 @@ export default function Footer() {
                         <h4 className="text-lg font-bold text-white mb-6">Company</h4>
                         <ul className="space-y-4 text-gray-400 text-sm">
                             <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="/#industries" className="hover:text-primary transition-colors">Industries</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Careers</Link></li>
-                            <li><Link href="/#insights" className="hover:text-primary transition-colors">Insights</Link></li>
+                            <li><Link href="/industries" className="hover:text-primary transition-colors">Industries</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Careers</Link></li>
+                            <li><Link href="/insights" className="hover:text-primary transition-colors">Insights</Link></li>
                             <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
                         </ul>
                     </div>
