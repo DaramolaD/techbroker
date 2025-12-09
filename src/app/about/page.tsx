@@ -16,11 +16,11 @@ export default function AboutPage() {
                         <span className="px-4 py-2 rounded-full bg-white/10 text-white text-sm font-semibold font-bold tracking-wider uppercase mb-6 inline-block backdrop-blur-md border border-white/20 animate-fade-in">About Tech Brokers</span>
                         <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
                             We Are The <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Execution Engine</span> <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Execution Partner</span> <br />
                             For Africa's Digital Future.
                         </h1>
                         <p className="text-xl text-gray-300 max-w-2xl font-light leading-relaxed">
-                            Strategies fail without execution. We exist to bridge that gap, turning ambitious digital roadmaps into functional, scalable realities.
+                            Strategies fail without execution. We exist to bridge that gap, turning ambitious digital roadmaps into functional and scalable realities.
                         </p>
                     </div>
                 </div>
@@ -45,15 +45,15 @@ export default function AboutPage() {
 
                         <div>
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                                Why We Are The One <br />
-                                <span className="text-secondary">To Go To.</span>
+                                Why We Are Your Go To <br />
+                                <span className="text-secondary">Partner.</span>
                             </h2>
                             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                                 <p>
-                                    In a landscape saturated with advice, <strong>Tech Brokers</strong> stands apart as the partner for action. We realized that many organizations from government agencies to fintech startups struggle not with <strong>ideas</strong>, but with the <strong>engineering</strong> of those ideas.
+                                    In a landscape saturated with advice, <strong>Tech Brokers</strong> stands apart as the partner for action. We realized that many organizations from government agencies to private businesses struggle not with <strong>ideas</strong>, but with the <strong>execution</strong> of those ideas.
                                 </p>
                                 <p>
-                                    We don't just hand over a PDF strategy document and wish you luck. We stay to build the APIs, design the user journeys, and secure the infrastructure.
+                                    We don't just hand over a PDF strategy document and wish you luck. We stay to design the user journeys, build the product and the infrastructure.
                                 </p>
                                 <p className="font-semibold text-secondary">
                                     We are architects, builders, and operators rolled into one.
@@ -66,7 +66,7 @@ export default function AboutPage() {
                                         <img className="w-10 h-10 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&q=64" alt="User" />
                                         <img className="w-10 h-10 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&q=64" alt="User" />
                                     </div>
-                                    <span>Trusted by 50+ Enterprises</span>
+                                    <span>Trusted by 20+ Enterprises</span>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
                             </div>
                             <h3 className="text-2xl font-bold text-secondary mb-4">Our Vision</h3>
                             <p className="text-gray-600 leading-relaxed text-lg">
-                                To be the most trusted partner for digital innovation and transformation, setting the standard for technological excellence in Africa.
+                                To be the most trusted catalyst for digital innovation, driving exceptional business growth and lasting value.
                             </p>
                         </div>
 
@@ -106,7 +106,7 @@ export default function AboutPage() {
                             </div>
                             <h3 className="text-2xl font-bold text-secondary mb-4">Our Mission</h3>
                             <p className="text-gray-600 leading-relaxed text-lg">
-                                To leverage digital technology to deliver strategic guidance, technical expertise, and execution capabilities that enable businesses and governments to thrive in the digital economy.
+                                To empower diverse industries and organizations by delivering specialized, expertly-executed digital solutions that unlock maximum value and drive immediate efficiency, utilizing best-in-class technology and proven expertise.
                             </p>
                         </div>
                     </div>

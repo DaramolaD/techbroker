@@ -34,7 +34,7 @@ export default function ContactPage() {
                         Let's Build Something <br /> Exceptional Together
                     </h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
-                        Ready to transform your digital capabilities? Get in touch with our team of experts to discuss your project.
+                        Ready to transform your digital capabilities? Get in touch with our team of experts to discuss your project or ideal.
                     </p>
                 </div>
             </section>
@@ -200,7 +200,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900 text-lg">Business Hours</h3>
-                                        <p className="text-primary font-bold my-1">Mon - Fri: 9AM - 6PM</p>
+                                        <p className="text-primary font-bold my-1">Mon - Fri: 8AM - 5PM</p>
                                         <p className="text-gray-500 text-sm">WAT (West African Time)</p>
                                     </div>
                                 </div>
