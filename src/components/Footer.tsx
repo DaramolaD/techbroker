@@ -32,11 +32,11 @@ export default function Footer() {
                     <div>
                         <h4 className="text-lg font-bold text-white mb-6">Solutions</h4>
                         <ul className="space-y-4 text-gray-400 text-sm">
-                            <li><Link href="#" className="hover:text-primary transition-colors">Digital Banking Strategy</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Government Innovation</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Enterprise Security</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Cloud Migration</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Data Analytics</Link></li>
+                            <li><Link href="/#services" className="hover:text-primary transition-colors">Digital Banking Strategy</Link></li>
+                            <li><Link href="/#services" className="hover:text-primary transition-colors">Government Innovation</Link></li>
+                            <li><Link href="/#services" className="hover:text-primary transition-colors">Enterprise Security</Link></li>
+                            <li><Link href="/#services" className="hover:text-primary transition-colors">Cloud Migration</Link></li>
+                            <li><Link href="/#services" className="hover:text-primary transition-colors">Data Analytics</Link></li>
                         </ul>
                     </div>
 
@@ -44,11 +44,11 @@ export default function Footer() {
                     <div>
                         <h4 className="text-lg font-bold text-white mb-6">Company</h4>
                         <ul className="space-y-4 text-gray-400 text-sm">
-                            <li><Link href="#" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Our Process</Link></li>
+                            <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+                            <li><Link href="/#industries" className="hover:text-primary transition-colors">Industries</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Careers</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Insights</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Contact</Link></li>
+                            <li><Link href="/#insights" className="hover:text-primary transition-colors">Insights</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
                         </ul>
                     </div>
 

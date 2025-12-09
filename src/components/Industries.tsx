@@ -6,7 +6,7 @@ const industries = [
         name: "Financial Services",
         icon: Landmark,
         description: "Digital banking, fintech integration, and fraud prevention systems.",
-        image: "https://images.unsplash.com/photo-1565514020179-0c2235cac9d9?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1611974765270-ca12586343bb?auto=format&fit=crop&w=800&q=80"
     },
     {
         name: "Government",

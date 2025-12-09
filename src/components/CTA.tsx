@@ -1,5 +1,5 @@
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function CTA() {
     return (
@@ -16,14 +16,14 @@ export default function CTA() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
-                                    href="#contact"
+                                    href="/contact"
                                     className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-primary hover:bg-primary-dark rounded-full transition-all"
                                 >
                                     Book a Call
                                     <ArrowRight className="ml-2 h-5 w-5" />
                                 </Link>
                                 <Link
-                                    href="#services"
+                                    href="/#services"
                                     className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border border-gray-600 hover:bg-gray-800 rounded-full transition-all"
                                 >
                                     See Our Strategy
