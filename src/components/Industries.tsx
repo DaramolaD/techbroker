@@ -1,44 +1,6 @@
-import { Building2, Landmark, Plane, Laptop2, ShoppingBag, Stethoscope, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-
-const industries = [
-    {
-        name: "Financial Services",
-        icon: Landmark,
-        description: "Digital banking, fintech integration, and fraud prevention systems.",
-        image: "https://images.unsplash.com/photo-1611974765270-ca12586343bb?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-        name: "Government",
-        icon: Building2,
-        description: "E-governance platforms, automated revenue collection, and citizen services.",
-        image: "https://images.unsplash.com/photo-1555848962-6e79363ec58f?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-        name: "Logistics",
-        icon: Plane,
-        description: "Real-time tracking, fleet management, and automated dispatch systems.",
-        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-        name: "Startups & Tech",
-        icon: Laptop2,
-        description: "MVP development, scaling architecture, and go-to-market technology.",
-        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-        name: "Retail & E-commerce",
-        icon: ShoppingBag,
-        description: "Omnichannel retail solutions, inventory management, and payment gateways.",
-        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-        name: "Healthcare",
-        icon: Stethoscope,
-        description: "Telemedicine platforms, patient record digitization, and hospital management.",
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
-    }
-];
+import { industries } from "@/lib/data";
 
 export default function Industries() {
     return (
@@ -61,9 +23,10 @@ export default function Industries() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {industries.map((industry, index) => (
-                        <div
+                        <Link
+                            href="/industries"
                             key={index}
-                            className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer"
+                            className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer block"
                         >
                             {/* Background Image */}
                             <div
@@ -91,7 +54,7 @@ export default function Industries() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

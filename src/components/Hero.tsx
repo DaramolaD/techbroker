@@ -29,7 +29,7 @@ export default function Hero() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 sm:mb-0 z-10">
                         <Link
-                            href="#contact"
+                            href="/contact"
                             className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-primary rounded-full hover:bg-primary-dark transition-all duration-300 shadow-lg shadow-primary/25"
                         >
                             Get Started

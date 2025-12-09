@@ -6,9 +6,9 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
     { name: "About", href: "/about" },
-    { name: "Industries", href: "/#industries" },
-    { name: "Insights", href: "/#insights" },
-    { name: "Contact", href: "/contact" },
+    { name: "Industries", href: "/industries" },
+    { name: "Insights", href: "/insights" },
+    { name: "Services", href: "/services" },
 ];
 
 export default function Navbar() {
@@ -58,10 +58,10 @@ export default function Navbar() {
                             </Link>
                         ))}
                         <Link
-                            href="#contact"
+                            href="/contact"
                             className="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary/20 text-sm"
                         >
-                            Get Started
+                            Start a Project
                         </Link>
                     </div>
 
@@ -93,11 +93,11 @@ export default function Navbar() {
                         ))}
                         <div className="pt-4">
                             <Link
-                                href="#contact"
+                                href="/contact"
                                 onClick={() => setIsOpen(false)}
                                 className="block w-full text-center bg-primary text-white px-6 py-3 rounded-full font-medium"
                             >
-                                Get Started
+                                Start a Project
                             </Link>
                         </div>
                     </div>

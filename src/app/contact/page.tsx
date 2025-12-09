@@ -2,6 +2,7 @@
 
 import { Mail, MapPin, Phone, Send, ArrowRight, MessageSquare, Clock } from "lucide-react";
 import { useState } from "react";
+import { CustomSelect } from "@/components/ui/CustomSelect";
 
 export default function ContactPage() {
     const [formState, setFormState] = useState({ firstName: "", lastName: "", email: "", company: "", serviceInterest: "", message: "" });
@@ -53,7 +54,7 @@ export default function ContactPage() {
 
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
+                                    <div className="space-y-2 grid">
                                         <label htmlFor="firstName" className="text-sm font-bold text-gray-700">First Name</label>
                                         <input
                                             type="text"
@@ -65,7 +66,7 @@ export default function ContactPage() {
                                             onChange={(e) => setFormState({ ...formState, firstName: e.target.value })}
                                         />
                                     </div>
-                                    <div className="space-y-2">
+                                    <div className="space-y-2 grid">
                                         <label htmlFor="lastName" className="text-sm font-bold text-gray-700">Last Name</label>
                                         <input
                                             type="text"
@@ -79,7 +80,7 @@ export default function ContactPage() {
                                     </div>
                                 </div>
 
-                                <div className="space-y-2">
+                                <div className="space-y-2 grid">
                                     <label htmlFor="email" className="text-sm font-bold text-gray-700">Email</label>
                                     <input
                                         type="email"
@@ -92,7 +93,7 @@ export default function ContactPage() {
                                     />
                                 </div>
 
-                                <div className="space-y-2">
+                                <div className="space-y-2 grid">
                                     <label htmlFor="company" className="text-sm font-bold text-gray-700">Company</label>
                                     <input
                                         type="text"
@@ -104,28 +105,23 @@ export default function ContactPage() {
                                     />
                                 </div>
 
-                                <div className="space-y-2">
+                                <div className="space-y-2 grid">
                                     <label htmlFor="serviceInterest" className="text-sm font-bold text-gray-700">Service Interest</label>
-                                    <div className="relative">
-                                        <select
-                                            id="serviceInterest"
-                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-gray-900 appearance-none cursor-pointer"
-                                            value={formState.serviceInterest}
-                                            onChange={(e) => setFormState({ ...formState, serviceInterest: e.target.value })}
-                                        >
-                                            <option value="">Select a service</option>
-                                            <option value="Digital Strategy">Digital Strategy</option>
-                                            <option value="Fintech Solutions">Fintech Solutions</option>
-                                            <option value="Government Innovation">Government Innovation</option>
-                                            <option value="Consulting">General Consulting</option>
-                                        </select>
-                                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
-                                            <ArrowRight className="w-4 h-4 rotate-90" />
-                                        </div>
-                                    </div>
+                                    <CustomSelect
+                                        id="serviceInterest"
+                                        options={[
+                                            { label: "Digital Strategy", value: "Digital Strategy" },
+                                            { label: "Fintech Solutions", value: "Fintech Solutions" },
+                                            { label: "Government Innovation", value: "Government Innovation" },
+                                            { label: "General Consulting", value: "Consulting" },
+                                        ]}
+                                        value={formState.serviceInterest}
+                                        onChange={(value) => setFormState({ ...formState, serviceInterest: value })}
+                                        placeholder="Select a service"
+                                    />
                                 </div>
 
-                                <div className="space-y-2">
+                                <div className="space-y-2 grid">
                                     <label htmlFor="message" className="text-sm font-bold text-gray-700">Message</label>
                                     <textarea
                                         id="message"

@@ -26,7 +26,7 @@ export default function About() {
                         </div>
 
                         <div className="mt-10">
-                            <Link href="#contact" className="group inline-flex items-center font-semibold text-secondary hover:text-primary transition-colors">
+                            <Link href="/about" className="group inline-flex items-center font-semibold text-secondary hover:text-primary transition-colors">
                                 Learn more about our mission
                                 <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                             </Link>
@@ -36,8 +36,13 @@ export default function About() {
                     {/* Right: Image */}
                     <div className="relative h-full">
                         <div className="aspect-[4/3] w-full h-full rounded-2xl overflow-hidden shadow-2xl relative z-10">
-                            <img
+                            {/* <img
                                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                                alt="TechBrokers Team Collaboration"
+                                className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
+                            /> */}
+                            <img
+                                src="/images/about.png"
                                 alt="TechBrokers Team Collaboration"
                                 className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
                             />
