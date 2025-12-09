@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Leadership from "@/components/Leadership";
 import CTA from "@/components/CTA";
 import { Lightbulb, Shield, Heart, Target, Eye, Flag, ArrowRight } from "lucide-react";
@@ -7,18 +5,16 @@ import { Lightbulb, Shield, Heart, Target, Eye, Flag, ArrowRight } from "lucide-
 export default function AboutPage() {
     return (
         <main className="min-h-screen bg-white font-sans">
-            <Navbar />
-
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-secondary">
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-20 overflow-hidden bg-secondary">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="max-w-4xl">
-                        <span className="text-primary font-bold tracking-wider uppercase text-sm mb-6 block animate-fade-in">About Tech Brokers</span>
-                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                        <span className="px-4 py-2 rounded-full bg-white/10 text-white text-sm font-semibold font-bold tracking-wider uppercase mb-6 inline-block backdrop-blur-md border border-white/20 animate-fade-in">About Tech Brokers</span>
+                        <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
                             We Are The <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Execution Engine</span> <br />
                             For Africa's Digital Future.
@@ -179,7 +175,6 @@ export default function AboutPage() {
             <Leadership />
 
             <CTA />
-            <Footer />
         </main>
     );
 }

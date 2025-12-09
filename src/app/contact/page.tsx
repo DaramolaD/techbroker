@@ -1,12 +1,10 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Send, ArrowRight, MessageSquare, Clock } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactPage() {
-    const [formState, setFormState] = useState({ name: "", email: "", subject: "", message: "" });
+    const [formState, setFormState] = useState({ firstName: "", lastName: "", email: "", company: "", serviceInterest: "", message: "" });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -16,128 +14,125 @@ export default function ContactPage() {
         setTimeout(() => {
             alert("Message sent! We will get back to you shortly.");
             setIsSubmitting(false);
-            setFormState({ name: "", email: "", subject: "", message: "" });
+            setFormState({ firstName: "", lastName: "", email: "", company: "", serviceInterest: "", message: "" });
         }, 1500);
     };
 
     return (
-        <main className="min-h-screen bg-white">
-            <Navbar />
+        <main className="min-h-screen bg-white font-sans">
 
-            {/* Header */}
-            <section className="pt-32 pb-16 bg-secondary text-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,85,51,0.1),transparent_50%)]"></div>
+            {/* Hero Section */}
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-secondary">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6">Get in Touch</h1>
-                    <p className="text-xl text-gray-300 max-w-2xl mx-auto font-light">
-                        Ready to start your digital transformation? Let's talk.
+                    <span className="px-4 py-2 rounded-full bg-white/10 text-white text-sm font-semibold mb-6 inline-block backdrop-blur-md border border-white/20">Get in Touch</span>
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                        Let's Build Something <br /> Exceptional Together
+                    </h1>
+                    <p className="text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
+                        Ready to transform your digital capabilities? Get in touch with our team of experts to discuss your project.
                     </p>
                 </div>
             </section>
 
-            <section className="py-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-16">
+            <section className="py-24 relative">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
 
-                        {/* Contact Information */}
+                        {/* LEFT COLUMN: Contact Form */}
                         <div>
-                            <h2 className="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
-                            <p className="text-gray-600 mb-12 text-lg">
-                                Whether you have a question about our services, pricing, or just want to see how we can help your business grow, our team is ready to answer all your questions.
-                            </p>
-
-                            <div className="space-y-8">
-                                <div className="flex items-start gap-4">
-                                    <div className="bg-primary/10 p-4 rounded-xl text-primary">
-                                        <MapPin className="w-6 h-6" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 text-lg">Our Office</h3>
-                                        <p className="text-gray-600 mt-1">
-                                            123 Innovation Drive, <br />
-                                            Victoria Island, Lagos, Nigeria.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-start gap-4">
-                                    <div className="bg-primary/10 p-4 rounded-xl text-primary">
-                                        <Mail className="w-6 h-6" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 text-lg">Email Us</h3>
-                                        <p className="text-gray-600 mt-1">hello@techbrokersglobal.com</p>
-                                        <p className="text-gray-600">support@techbrokersglobal.com</p>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-start gap-4">
-                                    <div className="bg-primary/10 p-4 rounded-xl text-primary">
-                                        <Phone className="w-6 h-6" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 text-lg">Call Us</h3>
-                                        <p className="text-gray-600 mt-1">+234 (0) 123 456 7890</p>
-                                        <p className="text-gray-600">+234 (0) 987 654 3210</p>
-                                    </div>
-                                </div>
+                            <div className="mb-10">
+                                <h2 className="text-3xl font-bold text-gray-900 mb-4">Send us a Message</h2>
+                                <p className="text-gray-600">
+                                    Fill out the form below and we'll get back to you within 24 hours.
+                                </p>
                             </div>
-                        </div>
 
-                        {/* Contact Form */}
-                        <div className="bg-gray-50 p-8 md:p-10 rounded-3xl border border-gray-100">
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label htmlFor="name" className="text-sm font-semibold text-gray-900">Full Name</label>
+                                        <label htmlFor="firstName" className="text-sm font-bold text-gray-700">First Name</label>
                                         <input
                                             type="text"
-                                            id="name"
+                                            id="firstName"
                                             required
-                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
-                                            placeholder="John Doe"
-                                            value={formState.name}
-                                            onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-gray-900 placeholder-gray-400"
+                                            placeholder="John"
+                                            value={formState.firstName}
+                                            onChange={(e) => setFormState({ ...formState, firstName: e.target.value })}
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <label htmlFor="email" className="text-sm font-semibold text-gray-900">Email Address</label>
+                                        <label htmlFor="lastName" className="text-sm font-bold text-gray-700">Last Name</label>
                                         <input
-                                            type="email"
-                                            id="email"
+                                            type="text"
+                                            id="lastName"
                                             required
-                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
-                                            placeholder="john@example.com"
-                                            value={formState.email}
-                                            onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-gray-900 placeholder-gray-400"
+                                            placeholder="Doe"
+                                            value={formState.lastName}
+                                            onChange={(e) => setFormState({ ...formState, lastName: e.target.value })}
                                         />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="subject" className="text-sm font-semibold text-gray-900">Subject</label>
-                                    <select
-                                        id="subject"
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all bg-white"
-                                        value={formState.subject}
-                                        onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
-                                    >
-                                        <option value="">Select a topic</option>
-                                        <option value="Consulting">Consulting Inquiry</option>
-                                        <option value="Partnership">Partnership Opportunity</option>
-                                        <option value="Careers">Careers</option>
-                                        <option value="Other">Other</option>
-                                    </select>
+                                    <label htmlFor="email" className="text-sm font-bold text-gray-700">Email</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        required
+                                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-gray-900 placeholder-gray-400"
+                                        placeholder="john@company.com"
+                                        value={formState.email}
+                                        onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                                    />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="message" className="text-sm font-semibold text-gray-900">Message</label>
+                                    <label htmlFor="company" className="text-sm font-bold text-gray-700">Company</label>
+                                    <input
+                                        type="text"
+                                        id="company"
+                                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-gray-900 placeholder-gray-400"
+                                        placeholder="Your Company"
+                                        value={formState.company}
+                                        onChange={(e) => setFormState({ ...formState, company: e.target.value })}
+                                    />
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label htmlFor="serviceInterest" className="text-sm font-bold text-gray-700">Service Interest</label>
+                                    <div className="relative">
+                                        <select
+                                            id="serviceInterest"
+                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-gray-900 appearance-none cursor-pointer"
+                                            value={formState.serviceInterest}
+                                            onChange={(e) => setFormState({ ...formState, serviceInterest: e.target.value })}
+                                        >
+                                            <option value="">Select a service</option>
+                                            <option value="Digital Strategy">Digital Strategy</option>
+                                            <option value="Fintech Solutions">Fintech Solutions</option>
+                                            <option value="Government Innovation">Government Innovation</option>
+                                            <option value="Consulting">General Consulting</option>
+                                        </select>
+                                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+                                            <ArrowRight className="w-4 h-4 rotate-90" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label htmlFor="message" className="text-sm font-bold text-gray-700">Message</label>
                                     <textarea
                                         id="message"
                                         required
-                                        rows={5}
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"
-                                        placeholder="How can we help you?"
+                                        rows={4}
+                                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none text-gray-900 placeholder-gray-400"
+                                        placeholder="Tell us about your project and goals..."
                                         value={formState.message}
                                         onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                                     ></textarea>
@@ -146,7 +141,7 @@ export default function ContactPage() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full py-4 px-6 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-70"
+                                    className="w-full py-4 px-6 bg-secondary hover:bg-primary text-white font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                                 >
                                     {isSubmitting ? "Sending..." : "Send Message"}
                                     {!isSubmitting && <Send className="w-5 h-5" />}
@@ -154,11 +149,88 @@ export default function ContactPage() {
                             </form>
                         </div>
 
+                        {/* RIGHT COLUMN: Contact Information */}
+                        <div>
+                            <div className="mb-10">
+                                <h2 className="text-3xl font-bold text-gray-900 mb-4">Contact Information</h2>
+                                <p className="text-gray-600">
+                                    Get in touch with us through any of these channels.
+                                </p>
+                            </div>
+
+                            <div className="space-y-8">
+                                {/* Phone */}
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+                                        <Phone className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 text-lg">Phone</h3>
+                                        <p className="text-primary font-bold text-xl my-1">08025272784</p>
+                                        <p className="text-gray-500 text-sm">Call us for immediate assistance</p>
+                                    </div>
+                                </div>
+
+                                {/* Email */}
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+                                        <Mail className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 text-lg">Email</h3>
+                                        <p className="text-gray-900 font-medium my-1">enquiries@techbrokersglobal.com</p>
+                                        <p className="text-gray-500 text-sm">Send us a message anytime</p>
+                                    </div>
+                                </div>
+
+                                {/* Office */}
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+                                        <MapPin className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 text-lg">Office</h3>
+                                        <p className="text-gray-900 font-medium my-1">
+                                            Plot 18 Yesufu Abiodun Oniru road VI
+                                        </p>
+                                        <p className="text-gray-500 text-sm">Visit our headquarters</p>
+                                    </div>
+                                </div>
+
+                                {/* Business Hours */}
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+                                        <Clock className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 text-lg">Business Hours</h3>
+                                        <p className="text-primary font-bold my-1">Mon - Fri: 9AM - 6PM</p>
+                                        <p className="text-gray-500 text-sm">WAT (West African Time)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Immediate Help Box */}
+                            <div className="mt-12 bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">Need Immediate Help?</h3>
+                                <p className="text-gray-500 mb-6 text-sm">
+                                    For urgent inquiries, call us directly or schedule a consultation.
+                                </p>
+                                <div className="flex gap-4">
+                                    <button className="px-6 py-3 bg-secondary text-white font-bold rounded-lg hover:bg-secondary/90 transition-colors flex items-center gap-2 text-sm">
+                                        <Phone className="w-4 h-4" /> Call Now
+                                    </button>
+                                    <button className="px-6 py-3 bg-white border border-gray-300 text-gray-700 font-bold rounded-lg hover:bg-gray-50 transition-colors text-sm">
+                                        Schedule Call
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
 
-            <Footer />
         </main>
     );
 }
