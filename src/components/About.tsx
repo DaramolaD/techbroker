@@ -14,14 +14,14 @@ export default function About() {
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
                             More Than Consultants. <br />
-                            <span className="text-secondary">We Are Builders.</span>
+                            <span className="text-secondary">We Are Your Execution Partner.</span>
                         </h2>
                         <div className="space-y-6 text-lg text-gray-600 leading-relaxed mix-blend-multiply">
                             <p>
-                                Tech Brokers Ltd is a premier digital transformation and technology consultancy. We don’t just offer advice; we help businesses, governments, and startups navigate the complexities of the digital age with confidence.
+                                Tech Brokers Ltd is a leading digital transformation and technology firm. We don&apos;t just offer advice; we help businesses, governments, and startups navigate the complexities of the digital age with confidence.
                             </p>
                             <p>
-                                From launching next-gen digital banks in Lagos to modernizing government workflows in Abuja, our mission is simple: <strong>Innovate boldly, execute flawlessly.</strong>
+                                From launching first Pan-Nigeria credential verification platform <a href="https://www.centralverification.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary transition-colors underline">&#40;CVP&#41;</a> to digital transformation projects for banks, and tertiary institutions, we are committed to making Africa a digital-first Continent. <br /> Our mission is simple: <strong>Innovate boldly, execute flawlessly.</strong>
                             </p>
                         </div>
 
@@ -49,22 +49,11 @@ export default function About() {
                             {/* Overlay Badge - Mission (Bottom Left) */}
                             <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-gray-100 max-w-xs animate-float">
                                 <div className="flex items-center gap-3 mb-2">
-                                    <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-                                    <span className="text-secondary font-bold text-sm uppercase tracking-wider">Mission</span>
+                                    {/* <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div> */}
+                                    {/* <span className="text-secondary font-bold text-sm uppercase tracking-wider">Mission</span> */}
                                 </div>
                                 <p className="text-gray-900 font-bold text-lg leading-tight">
                                     Innovate boldly, execute flawlessly.
-                                </p>
-                            </div>
-
-                            {/* Overlay Badge - Vision (Top Right) */}
-                            <div className="absolute top-6 right-6 bg-secondary/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/10 max-w-xs animate-float animation-delay-2000">
-                                <div className="flex items-center gap-3 mb-2">
-                                    <div className="w-2 h-2 rounded-full bg-white animate-pulse"></div>
-                                    <span className="text-primary font-bold text-sm uppercase tracking-wider">Vision</span>
-                                </div>
-                                <p className="text-white font-bold text-lg leading-tight">
-                                    Africa's digital infrastructure backbone.
                                 </p>
                             </div>
                         </div>
