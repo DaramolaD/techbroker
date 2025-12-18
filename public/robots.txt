@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://techbrokers.com/sitemap.xml
+
+# Disallow certain paths (if any)
+# Disallow: /api/
+# Disallow: /admin/
+
