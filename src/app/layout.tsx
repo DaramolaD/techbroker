@@ -59,9 +59,9 @@ export const metadata: Metadata = {
     description: 'We partner with businesses, industries, and government entities to navigate technology adoption and drive measurable impact through digital transformation.',
     images: [
       {
-        url: '/images/hero.jpg',
+        url: '/icon1.png',
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: 'Tech Brokers - Digital Transformation Partner',
       }
     ],
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tech Brokers | Digital Transformation & Innovation Partner',
     description: 'We partner with businesses, industries, and government entities to navigate technology adoption and drive measurable impact.',
-    images: ['/images/hero.jpg'],
+    images: ['/icon1.png'],
     creator: '@techbrokers',
   },
   verification: {
