@@ -94,6 +94,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="theme-color" content="#1e3a8a" />
+        <meta name="apple-mobile-web-app-title" content="TechBrokers" />
         <link rel="manifest" href="/manifest.json" />
         <StructuredData />
       </head>
