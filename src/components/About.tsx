@@ -21,7 +21,10 @@ export default function About() {
                                 Tech Brokers Ltd is a leading digital transformation and technology firm. We don&apos;t just offer advice; we help businesses, governments, and startups navigate the complexities of the digital age with confidence.
                             </p>
                             <p>
-                                From launching first Pan-Nigeria credential verification platform <a href="https://www.centralverification.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary transition-colors underline">&#40;CVP&#41;</a> to digital transformation projects for banks, and tertiary institutions, we are committed to making Africa a digital-first Continent. <br /> Our mission is simple: <strong>Innovate boldly, execute flawlessly.</strong>
+                                Our flagship product is <a href="https://www.centralverification.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary transition-colors underline">CVP</a>, Nigeria&apos;s leading digital credentials verification platform. We have built this leadership through strong execution and trusted delivery across public and private sector clients.
+                            </p>
+                            <p>
+                                Beyond CVP, our portfolio includes fintech services and fintech consulting for banks, followed by specialized oil and gas solutions, including the platform currently in development. We also work with reference customers across our focus sectors, reinforcing our track record of measurable impact. <br /> Our mission is simple: <strong>Innovate boldly, execute flawlessly.</strong>
                             </p>
                         </div>
 

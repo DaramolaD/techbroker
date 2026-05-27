@@ -10,19 +10,34 @@ import {
 
 const services = [
     {
-        title: "Digital Banking Strategy & Transformation",
-        description: "Building the next generation of African financial institutions. From neo-bank setup to core banking replacement.",
+        title: "CVP - Digital Credentials Verification",
+        description: "Our flagship product, CVP, is Nigeria's leading digital credentials verification platform used to improve trust, speed, and compliance in verification workflows.",
         icon: Target,
         className: "md:col-span-2 md:row-span-2",
+        bgImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+        dark: true
+    },
+    {
+        title: "Fintech Services & Bank Consulting",
+        description: "Building the next generation of African financial institutions through fintech products, strategy, and consulting for banks.",
+        icon: Cpu,
+        className: "md:col-span-2 md:row-span-1",
         bgImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+        dark: true
+    },
+    {
+        title: "Oil and Gas Solutions",
+        description: "Purpose-built digital platforms and operational systems for oil and gas organizations, including enterprise workflow modernization.",
+        icon: Rocket,
+        className: "md:col-span-1 md:row-span-1 bg-secondary text-white",
         dark: true
     },
     {
         title: "Technology Consulting",
         description: "Cloud migration, AI integration, and robust system architecture.",
-        icon: Cpu,
-        className: "md:col-span-1 md:row-span-1 bg-secondary text-white",
-        dark: true
+        icon: Lightbulb,
+        className: "md:col-span-1 md:row-span-1 bg-gray-50 text-gray-900 border border-gray-100",
+        dark: false
     },
     {
         title: "Product Innovation",
@@ -35,7 +50,7 @@ const services = [
         title: "Go to Market",
         description: "Comprehensive launch strategies that turn startups into market leaders. We handle market fit analysis, growth hacking pipelines, and customer acquisition to ensure your product lands with impact.",
         icon: Rocket,
-        className: "md:col-span-2 md:row-span-1",
+        className: "md:col-span-3 md:row-span-1",
         bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
         dark: true
     },
@@ -67,6 +82,9 @@ export default function Services() {
                         Comprehensive <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Digital Solutions.</span>
                     </h2>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                        Trusted by reference customers, we deliver impact through our flagship CVP platform, fintech services and consulting for banks, and specialized oil and gas solutions.
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-6">
